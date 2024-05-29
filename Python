@@ -1,0 +1,24 @@
+numeros = []
+
+for i in range(5):
+    numero = float(input('Entre com a %d° nota: ' % (i+1)))
+    numeros.append(numero)
+
+nosso_max = max(numeros)
+for i in range(5):
+    if(numeros[i] == nosso_max):
+        print('---------------')
+        print('Maior nota é %d' % numeros[i])
+
+nosso_min = min(numeros)
+for i in range(5):
+    if(numeros[i] == nosso_min):
+        print('---------------')
+        print('Menor nota é %d' % numeros[i])
+        print('---------------')
+
+def media(lista):
+    soma = sum(numeros)
+    return(soma / len(numeros))
+
+print('A media da lista é:', media(numeros))
